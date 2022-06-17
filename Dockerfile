@@ -7,7 +7,7 @@ RUN gem install bundler
 
 COPY Gemfile $ACTION_PATH/.
 COPY Gemfile.lock $ACTION_PATH/.
-COPY entrypoint.rb $ACTION_PATH/.
+COPY hello.rb $ACTION_PATH/.
 
 RUN cd $ACTION_PATH && bundle install
 

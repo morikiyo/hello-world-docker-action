@@ -6,4 +6,4 @@ ls $GITHUB_WORKSPACE
 echo 'exec action'
 cd /action
 ls .
-bundle exec ./entorypoint.rb $1
+bundle exec ruby ./helo.rb $1
