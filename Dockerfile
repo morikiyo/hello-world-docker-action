@@ -1,6 +1,6 @@
 FROM ruby:2.7-alpine
 
-WORKDIR /work
+# ENV GITHUB_WORKSPACE /work
 
 RUN gem install bundler
 
