@@ -9,5 +9,5 @@ which ruby
 echo 'exec action'
 cd /action
 ls .
-# bundle exec ruby ./helo.rb $1
-ruby ./hello.rb $1
+bundle exec ruby ./hello.rb $1
+# ruby ./hello.rb $1
