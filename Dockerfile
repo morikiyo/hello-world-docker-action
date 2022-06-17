@@ -4,7 +4,8 @@ WORKDIR /work
 
 RUN gem install bundler
 
-COPY Gemfile* .
+COPY Gemfile .
+COPY Gemfile.lock .
 
 RUN bundle install
 
