@@ -2,9 +2,10 @@
 
 echo 'entorypoint as hello'
 pwd
-ls /
+echo 'HOME'
 echo $HOME
 ls $HOME
-echo $GITHUB_ACTION_PATH
-ls $GITHUB_ACTION_PATH
+echo 'GITHUB_WORKSPACE'
+echo $GITHUB_WORKSPACE
+ls $GITHUB_WORKSPACE
 #bundle exec entorypoint.rb $1
