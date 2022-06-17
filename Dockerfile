@@ -1,16 +1,15 @@
 FROM ruby:2.7-alpine
 
+ENV ACTION_PATH /action
+
 RUN gem install bundler
 
-COPY Gemfile .
-COPY Gemfile.lock .
-COPY entrypoint.rb .
+COPY Gemfile $ACTION_PATH/.
+COPY Gemfile.lock $ACTION_PATH/.
+COPY entrypoint.rb $ACTION_PATH/.
 
-# RUN bundle install
+RUN cd $ACTION_PATH && bundle install
 
 COPY entrypoint.sh /entrypoint.sh
-
-RUN echo $HOME
-RUN echo $GITHUB_WORKSPACE
 
 ENTRYPOINT ["/entrypoint.sh"]

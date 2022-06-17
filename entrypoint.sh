@@ -1,11 +1,7 @@
 #!/bin/sh
 
-echo 'entorypoint as hello'
-pwd
-echo 'HOME'
-echo $HOME
-ls $HOME
-echo 'GITHUB_WORKSPACE'
-echo $GITHUB_WORKSPACE
+echo 'in WORKSPACE'
 ls $GITHUB_WORKSPACE
-#bundle exec entorypoint.rb $1
+
+echo 'exec action'
+cd /action && bundle exec entorypoint.rb $1
