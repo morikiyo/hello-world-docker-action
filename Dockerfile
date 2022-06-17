@@ -1,14 +1,13 @@
 FROM ruby:2.7-alpine
 
-# ENV GITHUB_WORKSPACE /work
-
 RUN gem install bundler
 
-COPY Gemfile .
-COPY Gemfile.lock .
+# COPY Gemfile .
+# COPY Gemfile.lock .
 
-RUN bundle install
+# RUN bundle install
 
-COPY entrypoint.rb .
+# COPY entrypoint.rb .
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["bundle", "exec", "ruby", "entrypoint.rb"]
+ENTRYPOINT ["/entrypoint.sh"]
