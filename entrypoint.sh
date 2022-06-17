@@ -3,6 +3,9 @@
 echo 'in WORKSPACE'
 ls $GITHUB_WORKSPACE
 
+echo 'which?'
+which ruby
+
 echo 'exec action'
 cd /action
 ls .
