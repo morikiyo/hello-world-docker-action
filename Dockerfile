@@ -1,5 +1,13 @@
 FROM ruby:2.7-alpine
 
-COPY entrypoint.sh /entrypoint.sh
+WORKDIR /work
 
-ENTRYPOINT ["/entrypoint.sh"]
+RUN gem install bundler
+
+COPY Gemfile* .
+
+RUN bundle install
+
+COPY entrypoint.rb .
+
+ENTRYPOINT ["bundle", "exec", "ruby", "entrypoint.rb"]
