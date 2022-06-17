@@ -10,4 +10,7 @@ COPY entrypoint.rb .
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN echo $HOME
+RUN echo $GITHUB_WORKSPACE
+
 ENTRYPOINT ["/entrypoint.sh"]
