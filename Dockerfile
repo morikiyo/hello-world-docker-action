@@ -2,6 +2,7 @@ FROM ruby:2.7-alpine
 
 ENV ACTION_PATH /action
 
+RUN mkdir -p $ACTION_PATH
 RUN gem install bundler
 
 COPY Gemfile $ACTION_PATH/.
